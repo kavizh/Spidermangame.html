@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100vw;
+            height: 100vh;
+            /*  background-image: url(https://sm.mashable.com/mashable_in/seo/default/what-makes-the-portals-scene-in-avengers-endgame-the-most-em_6zde.jpg);*/
+            background-image: url(https://wallpaperaccess.com/full/2277346.jpg
+);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #sm {
+            position: absolute;
+            top:100px;
+            left: 1000px;
+            height: 700px;
+            width: 500px;
+            z-index: 1000;
+        }
+        #gb{
+            z-index: 2;
+        }
+        button {
+            height: 50px;
+            width: 200px;
+            position: absolute;
+            top: 100px;
+            right: 500px;
+
+        }
+        #b1{
+            height: 50px;
+            width: 200px;
+            position: absolute;
+            top:100px;
+            left:700px;
+
+        }
+        #b2{
+            height: 50px;
+            width: 200px;
+            position: absolute;
+            top:200px;
+            left:700px;
+
+        }
+        #b3{
+            height: 50px;
+            width: 200px;
+            position: absolute;
+            top:300px;
+            left:700px;
+
+        }
+
+        @keyframes jump {
+            from {
+                position: absolute;
+                top:100px;
+                left: 1000px;
+                height: 700px;
+                transform:rotate(0deg);
+            }
+            to {
+                position: absolute;
+                top:-100px;
+                left: 250px;
+                height: 400px;
+                transform:rotate(25deg);
+
+            }
+        }
+        @keyframes gbshot1{
+           0%{
+            transform: rotate(0deg);
+           }
+           50%{
+              transform: rotate(0deg);
+           }
+           51%{
+            transform: rotate(360deg);
+           }
+           100%{
+              
+           }
+        }
+        @keyframes gbshot2{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 1;
+            }
+            51%{
+                opacity:0.8;
+            }
+            100%{
+              opacity: 0;
+            }
+        }
+        @keyframes gbshot3{
+            0%{
+              opacity: 1;
+              transform: rotate(0deg);
+            }
+            50%{
+                opacity: 1;
+              transform: rotate(0deg);
+            
+            }
+            51%{
+                opacity: 0.8;
+              transform: rotate(180deg);
+            }
+            100%{
+                opacity: 0;
+              transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://pngimg.com/uploads/spider_man/spider_man_PNG44.png" id="sm">
+    <img src="https://i.pinimg.com/originals/6b/9a/e0/6b9ae032f7cbcb0f95932475f8756680.png" id="gb">
+    <button onclick="shot1(this)" id="b1">Hit Goblin</button><br>
+    <button onclick="shot2(this)" id="b2">Vanish Goblin</button><br>
+    <button onclick="shot3(this)" id="b3">Vanish & Rotate Goblin</button><br>
+
+    <script>
+        function shot1() {
+            document.getElementById("sm").style.animation = "jump 2s";
+            document.getElementById("gb").style.animation="gbshot1 4s";
+            
+        }
+        function shot2() {
+            document.getElementById("sm").style.animation = "jump 2s";
+            document.getElementById("gb").style.animation="gbshot2 4s";
+            
+        }
+        function shot3() {
+            document.getElementById("sm").style.animation = "jump 2s";
+            document.getElementById("gb").style.animation="gbshot3 4s";
+            
+        }
+       
+       
+        
+    </script>
+
+
+</body>
+
+</html>
